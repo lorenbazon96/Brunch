@@ -1,0 +1,1407 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <title>Brunch</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <style>
+        body {
+            background-color: #ebbd68;
+        }
+        .header {
+            background-color: #c7954f;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        .logo {
+            position: absolute;
+            left: 5%;
+            top:5vh;
+            max-width: 22vh;
+            min-width: 18vh;
+            display: flex;
+        }
+        .headd {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .navbar {
+            right: 20vh;
+        }
+        .bijelitekst {
+            margin-left: 15px;
+            margin-right: 15px;
+            text-decoration: none;
+            color: #ffffff !important;
+            font-size: 25px;
+        }
+        .bijelitekst:hover {
+            color: #ffffff; /* keep white color on hover */
+            text-decoration: none; /* keep no underline on hover */
+            transform: scale(1.3); /* scale the font size by 10% on hover */
+          }
+        .meni {
+            position: absolute;
+            display: flex;
+        }
+        .bowlby-one-sc-regular {
+            font-family: "Bowlby One SC", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+        .burger {
+            position: absolute;
+            top: 30vh;
+        } 
+        .tockice {
+            object-fit: cover;
+            width: 100vw;
+            height: 100vh;
+            max-width: 100% !important;
+          }
+        .paragrafikontejner {
+            position: absolute;
+            top:50vh;
+            left: 50vw;
+        }
+        .naslov {
+            font-family: "Bowlby One SC", sans-serif;
+            font-weight: 400;
+            color: white;
+            font-size: 65px;
+        }
+        .paragraf1 {
+            width: 500px;
+            font-size: 17;
+            color: #ffffff;
+            position: absolute;
+            align-items: center;
+        }
+        .btn-custom1 {
+            position:absolute;
+            align-items: center;
+            top: 40vh;
+            border: none;
+            background-color: rgb(213, 104, 27);
+            border-radius: 0;
+            color: white;
+            font-size: 17px;
+        }
+        .btn-custom1:hover {
+            background-color: white;
+            color: rgb(213, 104, 27);
+        }
+        .trecikontejner {
+            background-color: #c7954f;
+            background-size: cover;
+            height: 100vh;
+            max-width: 100% !important;
+        }
+        .fleka {
+            position: absolute;
+            right: 0px;
+            margin-top: 1vh;
+            z-index: 1;
+        }
+        .spline {
+            position: absolute;
+            right: 0px;
+            top: 146.7vh;
+        }
+        .tocka {
+            position: absolute;
+            left:-11%;
+            margin-top: 17vh;
+        }
+        ._ {
+            font-size: 170px;
+            font-family: "Bowlby One SC", sans-serif;
+            color: rgb(235, 189, 104);
+            line-height: 1.2;
+            text-align: center;
+            position: absolute;
+            left: 840px;
+            top: 1230px;
+            z-index: 1;
+          }
+          .On {
+            font-size: 40px;
+            font-family: "Bowlby One SC", sans-serif;
+            color: rgb(255, 255, 255);
+            line-height: 1.2;
+            text-align: center;
+            position: absolute;
+            left: 600px;
+            top: 1390px;
+            z-index: 1;
+          }
+          .spline2 {
+            position: absolute;
+            left: -12px;
+            top: 229.9vh;
+            max-width: 75%;
+        }
+        .paragrafikontejner1 {
+            position: absolute;
+            top:280vh;
+            left: 62vw;
+            z-index: 1;
+        }
+        .paragraf2 {
+            width: 400px;
+            font-size: 17;
+            color: #ffffff;
+            position: absolute;
+            align-items: center;
+            margin-top: 30px;
+            margin-left: 75px;
+        }
+        .paragraf3 {
+            width: 400px;
+            font-size: 17;
+            color: #ffffff;
+            position: absolute;
+            align-items: center;
+            margin-top: 85px;
+            margin-left: 75px;
+        }
+        .paragraf4 {
+            width: 400px;
+            font-size: 17;
+            color: #ffffff;
+            position: absolute;
+            align-items: center;
+            margin-top: 155px;
+            margin-left: 75px;
+        }
+        .naslov1 {
+            font-family: "Bowlby One SC", sans-serif;
+            font-weight: 400;
+            color: #bd6827;
+            font-size: 65px;
+        }
+        .tacna {
+            position: absolute;
+            right: 0px;
+            top: 357vh;
+            max-width: 75%;
+            z-index: 1;
+        }
+        .trtuf {
+            position: absolute;
+            left: 750px;
+            top: 230.2vh;
+            max-width: 75%;
+        }
+        .tockica {
+            position: absolute;
+            left: 1110px;
+            top: 325vh;
+            max-width: 75%;
+        }
+        .tockica2 {
+            position: absolute;
+            left: 1110px;
+            top: 316.5vh;
+            max-width: 75%;
+        }
+        .tockica3 {
+            position: absolute;
+            left: 1110px;
+            top: 309vh;
+            max-width: 75%;
+        }
+        .petikontejner {
+            background-color: #c7954f;
+            background-size: cover;
+            height: 100vh;
+            max-width: 100% !important;
+        }
+        .spline3 {
+            position: absolute;
+            right: 0px;
+            max-width: 40.5%;
+            top: 406.6vh;
+        }
+        .kumpir {
+            position: absolute;
+            left:42%;
+            top:440vh;
+            z-index: 1;
+        }
+        .tacna2 {
+            position: absolute;
+            left: 0px;
+            top:470vh
+        }
+        .Best {
+            font-size: 62.5px;
+            font-family: "Bowlby One SC", sans-serif;
+            color: rgb(255, 255, 255);
+            line-height: 1.2;
+            text-align: left;
+            position: absolute;
+            left: 70px;
+            top: 430vh;
+            z-index: 1;
+          }
+          .paragraf5 {
+            font-size: 33.333px;
+            font-family: "Myriad Pro";
+            color: rgb(255, 255, 255);
+            line-height: 1;
+            text-align: left;
+            position: absolute;
+            left: 130px;
+            top: 460vh;
+            width: 92px;
+            height: 30px;
+          }
+          .paragraf6 {
+            font-size: 33.333px;
+            font-family: "Myriad Pro";
+            color: rgb(255, 255, 255);
+            line-height: 1;
+            text-align: left;
+            position: absolute;
+            left: 130px;
+            top: 470vh;
+            width: 170px;
+            height: 30px;
+          }
+          .paragraf7 {
+            font-size: 33.333px;
+            font-family: "Myriad Pro";
+            color: rgb(255, 255, 255);
+            line-height: 1;
+            text-align: left;
+            position: absolute;
+            left: 130px;
+            top: 480vh;
+            width: 150px;
+            height: 30px;
+          }
+          .paragraf8 {
+            font-size: 33.333px;
+            font-family: "Myriad Pro";
+            color: rgb(255, 255, 255);
+            line-height: 1;
+            text-align: left;
+            position: absolute;
+            left: 130px;
+            top: 490vh;
+            width: 150px;
+            height: 30px;
+            z-index: 1;
+          }
+          .tockica4 {
+            position: absolute;
+            left: 80px;
+            top: 460vh;
+            max-width: 75%;
+        }
+        .tockica5 {
+            position: absolute;
+            left: 80px;
+            top: 470vh;
+            max-width: 75%;
+        }
+        .tockica6 {
+            position: absolute;
+            left: 80px;
+            top: 480vh;
+            max-width: 75%;
+        }
+        .tockica7 {
+            position: absolute;
+            left: 80px;
+            top: 490vh;
+            max-width: 75%;
+        }
+        .sestikontejner {
+            background-color: #bd6827;
+            background-size: cover;
+            height: 100vh;
+            max-width: 100% !important;
+        }
+        .pozadina {
+            width: 100%;
+            margin-top: 150px;
+        }
+        .video {
+            position: absolute;
+            left: 18%;
+            margin-top: 150px;
+        }
+        .naslov2 {
+            font-family: "Bowlby One SC", sans-serif;
+            font-weight: 400;
+            color: white;
+            font-size: 65px;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .sedmikontejner {
+            display: flex;
+            justify-content: center;
+            background-image: url('18.png');
+            background-position: center; 
+            width: 100vw;
+            background-size: 100vw 45vw;
+            height: 100vh;
+            background-repeat: no-repeat;
+        }
+
+        .kartice,.kartice * {
+            border-radius: 0;
+            border:none;
+          }
+        .kartice {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .btn-custom2 {
+            color: white;
+            background-color: #bd6827;
+        }
+        .kartice {
+            text-align: center;
+            color: #bd6827;
+          }
+          
+        .kartice button {
+            display: inline-block;
+            margin: 0 auto;
+          }
+        .osmikontejner {
+            display: flex;
+            justify-content: center;
+            background-image: url('19.png');
+            background-position: center; 
+            width: 100vw;
+            background-size: 100vw 45vw;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-color: #bd6827;
+            flex-wrap: wrap;
+        }
+        .form1 {
+            margin: 70px auto;
+            padding: 40px;
+            background-color: #fff;
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-image: url('20.png'); 
+            background-size: cover;
+            background-position: center;
+            width: 850px;
+            height: 660px;
+          }
+          
+          h2 {
+            font-family: "Bowlby One SC", sans-serif;
+            font-weight: 400;
+            margin-top: 30px;
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 60px;
+            margin-bottom: 50px;
+              
+          }
+          
+          .form-row {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+          }
+          
+          input, select, textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            background-color: #ece4cd;
+        }
+          .btn-custom3 {
+            background-color: #ebbd68;
+            color: white;
+            border: none;
+            width: 150px;
+            height: 40px;
+          }
+          .btn-custom3:hover {
+            background-color: #bd6827;
+            color: #ffffff;
+          }
+          .newsletter-container {
+            max-width: 100%;
+            margin: 50px auto;
+            text-align: center;
+            padding: 20px;
+            background-image: url('21.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+          
+          .newsletter-title {
+            position: absolute;
+            top: 850vh;
+            left: 34vw;
+            font-size: 72px;
+          }
+          
+          .newsletter-text {
+            position: absolute;
+            top: 865vh;
+            left: 28vw;
+            color: white;
+          }
+          
+          .input-group {
+            position: absolute;
+            top: 875vh;
+            left: 33vw;
+          }
+          
+          .newsletter-input {
+            padding: 10px;
+            border: 1px solid #ffffff;
+            border-radius: 0px;
+            width: 400px;
+            height:50px;
+            background-color: transparent;
+          }
+          .newsletter-input::placeholder {
+            color: #ffffff;
+          }
+          
+          .newsletter-btn {
+            background-color: white;
+            color: #bd6827;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 0px;
+            cursor: pointer;
+            margin-left: -5px; 
+            font-weight: bold;
+            height: 50px;
+            margin-top: 0px;
+          }
+          
+          .newsletter-btn:hover {
+            background-color: #bd6827;
+            color: #fff;
+          }
+          
+          .footer .col-md-4:nth-child(5) {
+            order: 1;
+          }
+          
+          .footer .col-md-4:nth-child(1) {
+            order: 2;
+          }
+          a {
+            text-decoration: none;
+          }
+          .list-inline {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+          
+          .list-inline > li {
+            display: inline-block;
+            margin-right: 10px; 
+          }
+          .foter {
+            padding-top:150px ;
+          }
+          .ime {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ebbd68;
+          }
+          .logopredzadnji {
+            width: 150px;
+          }
+          .logozadnji {
+            width: 100px;
+            margin: 25px;
+          }
+          .btn-customfind {
+            border: solid;
+            border-color: #fff;
+            border-radius: 0;
+            border-width: 1px;
+            background-color: #ffa662c3;
+            width: 60px;
+            height: 36px;
+          }
+          .zadnjiinput {
+            background-color: #bd6827;
+            border-color: #fff;
+            border-width: 1px;
+            border-radius: 0;
+            height: 36px;
+            width: 180px;
+          }
+          
+        /* Stilovi za mobilne uređaje */
+        @media (max-width: 576px) {
+            .logo {
+                left: 10%;
+            }
+            .collapse.navbar-collapse {
+                position: absolute;
+                top: 100%;
+                left: 50px;
+                width: 150px;
+                background-color:#c7954f;
+                padding: 1rem;
+                border: none;
+                border-radius: 0;
+              }
+              .navbar-collapse {
+                transition: height 0s;
+              }
+              .navbar-toggler {
+                position: relative;
+                z-index: 1;
+                border: none;
+                left: 4rem;
+              }
+              
+              .navbar-toggler:focus {
+                box-shadow: none;
+              }
+              .navbar {
+                right: 0;
+            }
+            .paragrafikontejner {
+                position: absolute;
+                top:90vh;
+                left: 10px;
+            }
+            .naslov {
+                font-size: 40px;
+                margin-top: -70px;
+            }
+            .paragraf1 {
+                width: 300px;
+            }
+            .btn-custom1 {
+                top: 45vh;
+                font-size: 19px;
+            }
+            .burger {
+                z-index: -1;
+            } 
+            .tockice {
+                height: 125vh;
+                z-index: -2;
+              }
+              .fleka {
+                position: absolute;
+                right: 0px;
+                margin-top: 15px;
+                z-index: 1;
+                max-width: 45%;
+            }
+            .spline {
+                position: absolute;
+                right: 0px;
+                top: 236.2vh;
+                width: 50%;
+                height: 123.59px;
+            }
+            .tocka {
+                position: absolute;
+                left:-53%;
+                margin-top: 17vh;
+            }
+            ._ {
+                left: 36%;
+                top: 1140px;
+              }
+              .On {
+                left: 0px;
+                top: 1250px;
+                z-index: 2;
+
+              }
+              .spline2 {
+                position: absolute;
+                left: -12px;
+                top: 254.9vh;
+                max-width: 91%;
+                height: 330.79px;
+            }
+            .paragraf2 {
+                width: 260px;
+                font-size: 17;
+                color: #ffffff;
+                position: absolute;
+                align-items: center;
+                margin-top: 30px;
+                margin-left: 45px;
+            }
+            .paragraf3 {
+                width: 260px;
+                font-size: 17;
+                color: #ffffff;
+                position: absolute;
+                align-items: center;
+                margin-top: 85px;
+                margin-left: 45px;
+            }
+            .paragraf4 {
+                width: 260px;
+                font-size: 17;
+                color: #ffffff;
+                position: absolute;
+                align-items: center;
+                margin-top: 155px;
+                margin-left: 45px;
+            }
+            .naslov1 {
+                font-family: "Bowlby One SC", sans-serif;
+                font-weight: 400;
+                color: #bd6827;
+                font-size: 33px;
+
+            }
+            .tacna {
+                position: absolute;
+                right: 0px;
+                top: 383vh;
+                max-width: 75%;
+                z-index: 1;
+            }
+            .trtuf {
+                position: absolute;
+                left: 35px;
+                top: 305.0vh;
+                max-width: 75%;
+                height: 138.21px;
+            }
+            .tockica {
+                position: absolute;
+                left: 25px;
+                top: 357vh;
+                max-width: 5%;
+            }
+            .tockica2 {
+                position: absolute;
+                left: 25px;
+                top: 365.1vh;
+                max-width: 5%;
+            }
+            .tockica3 {
+                position: absolute;
+                left: 25px;
+                top: 375.5vh;
+                max-width: 5%;
+            }
+            .paragrafikontejner1 {
+                position: absolute;
+                top:334vh;
+                left: 10px;
+                z-index: 1;
+            }
+            .petikontejner {
+                background-color: #c7954f;
+                background-size: cover;
+                height: 700px !important;
+                max-width: 100% !important;
+            }
+            .spline3 {
+                max-width: 70.5%;
+                top: 431.6vh;
+            }
+            .kumpir {
+                display: none;
+            }
+            .tacna2 {
+                top:480vh
+            }
+            .Best {
+                text-align: center;
+                top: 440vh;
+                left: 5px;
+              }
+              .paragraf5 {
+                font-size: 25px;
+                top: 490vh;
+                z-index: 1;
+              }
+              .paragraf6 {
+                font-size: 25px;
+                top: 500vh;
+                z-index: 1;
+              }
+              .paragraf7 {
+                font-size: 25px;
+                top: 510vh;
+                z-index: 1;
+              }
+              .paragraf8 {
+                font-size: 25px;
+                top: 520vh;
+                z-index: 1;
+              }
+              .tockica4 {
+                left: 100px;
+                top: 490.5vh;
+                max-width: 5%;
+            }
+            .tockica5 {
+                left: 100px;
+                top: 500.5vh;
+                max-width: 5%;
+            }
+            .tockica6 {
+                left: 100px;
+                top: 510.5vh;
+                max-width: 5%;
+            }
+            .tockica7 {
+                left: 100px;
+                top: 520.5vh;
+                max-width: 5%;
+            }
+            .video {
+                position: absolute;
+                width: 100%;
+                height: 40vh;
+                left: 0;
+                margin-top: 15px;
+            }
+            .kartice {
+                margin-left:15px ;
+                margin-bottom: 20px;
+              }
+            .naslov2 {
+                text-align: center;
+                margin-top: 10px;
+            }
+            .osmikontejner {
+                flex-direction: column;
+                position: relative;
+                top: 750px;
+              }
+              .form1 {
+                width: 95%;
+              }
+            .sestikontejner{
+                height: 300px !important;
+            }
+            .sedmikontejner {
+                max-height: 100vh;
+            }
+            h2 {
+                margin-bottom: 30px;
+                margin-top: 5px;
+              }
+              input, select, textarea {
+                padding: 10px;
+                margin-bottom: 3px;
+            }
+            .newsletter-container {
+                position: relative;
+                width: 100%;
+                top: 112vh;
+                height: 60vh !important;
+            }
+            .newsletter-title {
+                position: relative;
+                top: 10vh;
+                left: 0;
+                font-size: 46px;
+              }
+              .newsletter-text {
+                position: relative;
+                top: 10vh;
+                left: 0;
+              }
+              
+              .input-group {
+                position: relative;
+                top:13vh;
+                left: 2vh;
+              }
+              .newsletter-input {
+                position: relative;
+                width: 300px; 
+                height:50px;
+                margin-bottom: 10px;
+              }
+              .newsletter-btn {
+                position: relative;
+                left: 13vh;
+              }
+            .footer {
+                position:absolute;
+                height: 180vh !important;
+                top: 957vh;
+                margin-top: 0;
+                text-align: center;
+            }
+            .logopredzadnji {
+                margin-top: -140px;
+            }
+            .trazi {
+                margin-top: 25px;
+            }
+            .zadnjiinput {
+                width: 80%;
+            }
+        }
+
+               /* Stilovi za tablet uređaje */
+        @media (min-width: 577px) and (max-width: 768px) {
+            .logo {
+                left: 10%;
+            }
+            .collapse.navbar-collapse {
+                position: absolute;
+                top: 100%;
+                left: 50px;
+                width: 150px;
+                background-color:#c7954f;
+                padding: 1rem;
+                border: none;
+                border-radius: 0;
+              }
+              .navbar-collapse {
+                transition: none;
+              }
+              .navbar-collapse {
+                transition: height 0s;
+              }
+              .navbar-toggler {
+                position: relative;
+                z-index: 1;
+                border: none;
+                left: 2rem;
+              }
+              
+              .navbar-toggler:focus {
+                box-shadow: none;
+              }
+              .navbar {
+                right: 0;
+            }
+            .paragrafikontejner {
+                position: absolute;
+                top:90vh;
+                left: 10px;
+            }
+            .naslov {
+                font-size: 60px;
+            }
+            .paragraf1 {
+                text-align: center;
+                width: 500px;
+            }
+            .btn-custom1 {
+                top: 45vh;
+                font-size: 19px;
+            }
+            .burger {
+                z-index: -1;
+            } 
+            .tockice {
+                height: 125vh;
+                z-index: -2;
+              }
+              .fleka {
+                position: absolute;
+                right: 0px;
+                margin-top: 15px;
+                z-index: 1;
+                max-width: 45%;
+            }
+            .spline {
+                position: absolute;
+                right: 0px;
+                top: 238.6vh;
+                width: 48%;
+                height: 123.59px;
+            }
+            .tocka {
+                position: absolute;
+                left:-53%;
+                margin-top: 17vh;
+            }
+            ._ {
+                left: 36%;
+                top: 1140px;
+                z-index:-1;
+              }
+              .On {
+                left: 10vh;
+                top: 1450px;
+                z-index: 2;
+
+              }
+              .spline2 {
+                position: absolute;
+                left: -12px;
+                top: 254.9vh;
+                max-width: 91%;
+                height: 75vh;
+            }
+            .paragraf2 {
+                width: 260px;
+                font-size: 17;
+                color: #ffffff;
+                position: absolute;
+                align-items: center;
+                margin-top: 30px;
+                margin-left: 45px;
+            }
+            .paragraf3 {
+                width: 260px;
+                font-size: 17;
+                color: #ffffff;
+                position: absolute;
+                align-items: center;
+                margin-top: 85px;
+                margin-left: 45px;
+            }
+            .paragraf4 {
+                width: 260px;
+                font-size: 17;
+                color: #ffffff;
+                position: absolute;
+                align-items: center;
+                margin-top: 155px;
+                margin-left: 45px;
+            }
+            .naslov1 {
+                font-family: "Bowlby One SC", sans-serif;
+                font-weight: 400;
+                color: #bd6827;
+                font-size: 59px;
+
+            }
+            .tacna {
+                position: absolute;
+                right: 0px;
+                top: 377vh;
+                max-width: 75%;
+                z-index: 1;
+            }
+            .trtuf {
+                position: absolute;
+                left: 276px;
+                top: 329.8vh;
+                max-width: 75%;
+                height: 138.21px;
+            }
+            .tockica {
+                position: absolute;
+                left: 35px;
+                top: 369vh;
+                max-width: 3%;
+            }
+            .tockica2 {
+                position: absolute;
+                left: 35px;
+                top: 376.1vh;
+                max-width: 3%;
+            }
+            .tockica3 {
+                position: absolute;
+                left: 35px;
+                top: 385.5vh;
+                max-width: 3%;
+            }
+            .paragrafikontejner1 {
+                position: absolute;
+                top:339vh;
+                left: 19px;
+                z-index: 1;
+                font-size: 18;
+            }
+            .petikontejner {
+                background-color: #c7954f;
+                background-size: cover;
+                height: 700px !important;
+                max-width: 100% !important;
+            }
+            .spline3 {
+                max-width: 70.5%;
+                top: 431.6vh;
+            }
+            .kumpir {
+                display: none;
+            }
+            .tacna2 {
+                top:478vh
+            }
+            .Best {
+                top: 440vh;
+                left: 65px;
+                font-size: 70px;
+              }
+              .paragraf5 {
+                font-size: 25px;
+                top: 480vh;
+                z-index: 1;
+              }
+              .paragraf6 {
+                font-size: 25px;
+                top: 490vh;
+                z-index: 1;
+              }
+              .paragraf7 {
+                font-size: 25px;
+                top: 500vh;
+                z-index: 1;
+              }
+              .paragraf8 {
+                font-size: 25px;
+                top: 510vh;
+                z-index: 1;
+              }
+              .tockica4 {
+                left: 80px;
+                top: 479.5vh;
+                max-width: 5%;
+            }
+            .tockica5 {
+                left: 80px;
+                top: 489.5vh;
+                max-width: 5%;
+            }
+            .tockica6 {
+                left: 80px;
+                top: 499.5vh;
+                max-width: 5%;
+            }
+            .tockica7 {
+                left: 80px;
+                top: 509.5vh;
+                max-width: 5%;
+            }
+            .video {
+                position: absolute;
+                width: 100%;
+                height: 50vh;
+                left: 0;
+                margin-top: 15px;
+            }
+            .kartice {
+                margin-left:30vw ;
+                margin-bottom: 20px;
+              }
+            .naslov2 {
+                text-align: center;
+                margin-top: 10px;
+            }
+            .osmikontejner {
+                flex-direction: column;
+                position: relative;
+                top: 750px;
+              }
+              .form1 {
+                width: 95%;
+              }
+            .sestikontejner{
+                height: 420px !important;
+            }
+            .sedmikontejner {
+                max-height: 80vh;
+            }
+            h2 {
+                margin-bottom: 30px;
+                margin-top: 5px;
+              }
+              input, select, textarea {
+                padding: 10px;
+                margin-bottom: 3px;
+            }
+            .newsletter-container {
+                position: relative;
+                width: 100%;
+                top: 112vh;
+                height: 60vh !important;
+            }
+            .newsletter-title {
+                position: relative;
+                top: 10vh;
+                left: 0;
+                font-size: 70px;
+              }
+              .newsletter-text {
+                position: relative;
+                top: 10vh;
+                left: 0;
+              }
+              
+              .input-group {
+                position: relative;
+                top:13vh;
+                left: 2vh;
+              }
+              .newsletter-input {
+                position: relative;
+                width: 520px; 
+                height:50px;
+                margin-bottom: 10px;
+              }
+              .newsletter-btn {
+                position: relative;
+                left: 0vh;
+              }
+            .footer {
+                position:absolute;
+                height: 150vh !important;
+                top: 957vh;
+                margin-top: 0;
+                text-align: center;
+            }
+            .logopredzadnji {
+                margin-top: -140px;
+            }
+            .trazi {
+                margin-top: 25px;
+            }
+            .zadnjiinput {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+  <body>
+    <div class="container-fluid headd" style="padding: 0; margin: 0;">
+        <div class="col-3 col-3-md header w-100 mx-auto" style="height: 20vh;">
+            <img src="1.png" class="logo" alt="">
+        </div>
+        <div class="col-8 col-8-md navigacija header">
+            <nav class="navbar navbar-expand-md bg-transparent">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon meni"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-link active bijelitekst" aria-current="page" href="#">Home</a>
+                      <a class="nav-link bijelitekst" href="#">About</a>
+                      <a class="nav-link bijelitekst" href="#">Product</a>
+                      <a class="nav-link bijelitekst" href="#">Blog</a>
+                      <a class="nav-link bijelitekst" href="#">Shop</a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </div>
+    <div class="container-fluid drugikonteiner" style="padding: 0; margin: 0;">
+        <div class="row">
+        <img src="3.png" class="img-fluid w-100 tockice" alt="" style="max-width: none;">
+            <div class="col-12 col-md-6">
+                <img src="2.png" class="burger img-fluid" alt="">
+            </div>
+            <div class="col-12 col-md-6 flex-column justify-content-center paragrafikontejner">
+                <div><p class="naslov">Wellcome to <br>BRUNCH Time</p></div>
+                <div><p class="paragraf1">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+                <div><button class="btn btn-custom1">Learn More</button></div>
+            </div>
+        </div>
+    </div>  
+    <div class="container-fluid trecikontejner" style="padding: 0; margin: 0; height:110vh">
+        <div class="row">
+            <div class="col-12 col-md-12 justify-content-center">
+                <p class="_">"</p>
+                <p class="On">On Weekends, We Brunch
+                <br> <br> -Anonimous-</p>
+                <img src="4.png" class="img-fluid fleka" alt="">
+                <img src="5.png" class="img-fluid tocka" alt="">
+                <img src="6.png" class="img-fluid spline" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid cetvrtikonteiner" style="padding: 0; margin: 0; height:176.6vh">
+        <div class="row">
+        <img src="8.png" class="img-fluid spline2" alt="">
+            <div class="col-12 col-md-6">
+                <img src="9.png" class="img-fluid tockica" alt="">
+                <img src="9.png" class="img-fluid tockica2" alt="">
+                <img src="9.png" class="img-fluid tockica3" alt="">
+                <img src="10.png" class="img-fluid tacna" alt="">
+                <img src="7.png" class="img-fluid trtuf" alt="">
+            </div>
+            <div class="col-12 col-md-6 flex-column justify-content-center paragrafikontejner1">
+                <div><p class="naslov1">Why You Must
+                    <br>Brunch in Here </p></div>
+                <div><p class="paragraf2">Excepteur sint occaecat cupidatat non proident</p></div>
+                <div><p class="paragraf3">Ullamcorper dignissim cras lobortis feugiat eget.</p></div>
+                <div><p class="paragraf4">At lectus urna duis convallis, kuat dilakoni ora kuat ditinggal ngopi</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid petikontejner" style="padding: 0; margin: 0; height:110vh">
+        <div class="row">
+            <div class="col-12 col-md-12 justify-content-center">
+                <div><p class="Best">Best Seller
+                    <br>Brunch Menu </p></div>
+                <div><p class="paragraf5">Burger</p></div>
+                <div><p class="paragraf6">French Fries</p></div>
+                <div><p class="paragraf7">Hot Milk</p></div>
+                <div><p class="paragraf8">Fruit Salad</p></div>
+                <img src="11.png" class="img-fluid kumpir" alt="">
+                <img src="12.png" class="img-fluid tacna2" alt="">
+                <img src="13.png" class="img-fluid spline3" alt="">
+                <img src="9.png" class="img-fluid tockica4" alt="">
+                <img src="9.png" class="img-fluid tockica5" alt="">
+                <img src="9.png" class="img-fluid tockica6" alt="">
+                <img src="9.png" class="img-fluid tockica7" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid sestikontejner" style="padding: 0; margin: 0; height:110vh">
+        <div class="row">
+            <div class="col-12 col-md-12 justify-content-center">
+                <img src="14.png" class="img-fluid pozadina" alt="">
+                <iframe width="1000" height="500" src="https://www.youtube.com/embed/ulhRORJpuBM?si=jTzKjJnuKcUkh5AT" title="YouTube video player" frameborder="0" class="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid sedmikontejner" style="padding: 0; margin: 0; height:100vh">
+        <div class="row">
+            <h1 class="naslov2">Our Choice</h1>
+            <div class="col-12 col-md-4 justify-content-center">
+                <div class="card kartice" style="width: 18rem;">
+                    <img src="15.png" class="card-img-top" alt="...">
+                    <div class="card-body ">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-custom2">Visit Now</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-12 col-md-4 justify-content-center">
+                <div class="card kartice" style="width: 18rem;">
+                    <img src="16.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-custom2">Visit Now</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-12 col-md-4 justify-content-center">
+                <div class="card kartice" style="width: 18rem;">
+                    <img src="17.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-custom2">Visit Now</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid osmikontejner" style="padding: 0; margin: 0; height:100vh">
+        <div class="row">
+            <div class="col-12 col-md-12 justify-content-center">
+                <form class="form1">
+                    <h2>Get in Touch</h2>
+                    <div class="form-row">
+                      <input type="text" placeholder="Name" style="width: 48%;" />
+                      <input type="email" placeholder="Email" style="width: 48%;" />
+                    </div>
+                    <div class="form-row">
+                      <select style="width: 48%;">
+                        <option value="">Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                      </select>
+                      <input type="text" placeholder="Address" style="width: 48%;" />
+                    </div>
+                    <div class="form-row">
+                      <textarea placeholder="Message" style="width: 100%; height:200px;"></textarea>
+                    </div>
+                    <button type="submit" class="btn-custom3">Send Message</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid newsletter-container" style="padding: 0; margin: 0; height:110vh">
+        <h2 class="newsletter-title">Newsletter</h2>
+        <p class="newsletter-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <div class="input-group">
+                <input type="email" id="email" class="newsletter-input" placeholder="Email Address">
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+            </div>
+    </div>
+    <footer class="container-fluid text-white footer" style="background-color: #bd6827; height:60vh">
+        <div class="container foter">
+          <div class="row">
+            <div class="col-md-2 col-sm-12">
+              <img src="1.png" alt="Brunch logo" class="img-fluid mb-3 logopredzadnji">
+              <p class="mt-3 ime">The Brunch</p>
+              <p class="mt-3">Swadaya One Street
+                Jakarta, Indonesia
+                12850</p>
+            </div>
+            <div class="col-md-2 col-sm-12">
+              <h5 class="ime">Sitemap</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Home</a></li>
+                <li><a href="#" class="text-white">About</a></li>
+                <li><a href="#" class="text-white">Products</a></li>
+                <li><a href="#" class="text-white">Store</a></li>
+                <li><a href="#" class="text-white">Blog</a></li>
+                <li><a href="#" class="text-white">Shop</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-sm-12">
+              <h5 class="ime">Products</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Main Course</a></li>
+                <li><a href="#" class="text-white">Appetizer</a></li>
+                <li><a href="#" class="text-white">Dessert</a></li>
+                <li><a href="#" class="text-white">Food</a></li>
+                <li><a href="#" class="text-white">Drink</a></li>
+                <li><a href="#" class="text-white">Krupuk</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-sm-12">
+              <h5 class="ime">Shop</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Official Merchandise</a></li>
+                <li><a href="#" class="text-white">Coffee Bean</a></li>
+              </ul>
+              <h5 class="mt-3 ime social">Social Media</h5>
+              <ul class="list-unstyled list-inline">
+                <li><a href="#" class="text-white" style="display: inline-block; font-size: 27px;"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#" class="text-white mx-2" style="display: inline-block; font-size: 27px;"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" class="text-white" style="display: inline-block; font-size: 27px;"><i class="fab fa-twitter"></i></a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-sm-12">
+              <form class="d-flex trazi">
+                <input class="form-control zadnjiinput" type="search" placeholder="" aria-label="Search">
+                <button class="btn btn-customfind text-white" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form>
+              <img src="1.png" alt="Brunch logo" class="img-fluid mb-3 logozadnji">
+              <p class="mt-3">Copyright © 2023 Brunch</p>
+              <p class="mt-3">Company S.L. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
